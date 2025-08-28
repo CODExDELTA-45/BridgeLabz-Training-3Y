@@ -1,0 +1,18 @@
+public class SalarySlip {
+    public static void main(String[] args) {
+        String[] names = {"Rohit", "Sneha", "Amit"};
+        int[] salary = {40000, 55000, 30000};
+
+        for (int i = 0; i < names.length; i++) {
+            int hra = 0.2 * salary[i];
+            int da = 0.1 * salary[i];
+            int gross = salary[i] + hra + da;
+            int net = (gross > 50000) ? gross - (0.1 * gross) : gross;
+
+            System.out.println(names[i] + " | Basic: " + salary[i] +
+                               " | HRA: " + hra +
+                               " | DA: " + da +
+                               " | Net: " + net);
+        }
+    }
+}
